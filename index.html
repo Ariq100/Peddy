@@ -14,7 +14,20 @@
     <style>
         :root {
             --btn-color: #0E7A81;
-            background-color: white;
+        }
+
+        /* Force light mode for Chrome dark mode */
+        @media (prefers-color-scheme: dark) {
+
+            main,
+            .navbar,
+            .card,
+            .modal-content,
+            .bg-base-100,
+            div {
+                background-color: white !important;
+                color: black !important;
+            }
         }
 
         /* Modal Styles */
@@ -207,7 +220,8 @@
                 <nav>
                     <h6
                         class="footer-title inline-flex gap-3 font-black text-2xl justify-center align-center text-white">
-                        <img src="/images/logo.webp" class="w-full h-full">Peddy</h6>
+                        <img src="/images/logo.webp" class="w-full h-full">Peddy
+                    </h6>
                     <a class="link link-hover">Location: av. Washington 165, NY CA 54003</a>
                     <a class="link link-hover">Phone: +31 85 964 47 25</a>
                     <a class="link link-hover">Email: info@yourdomain.com</a>
